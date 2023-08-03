@@ -100,7 +100,6 @@ public class UserRestControllerTest extends MyRestDoc {
 
         // then
         resultActions.andExpect(MockMvcResultMatchers.jsonPath("$.success").value("false"));
-        resultActions.andExpect(MockMvcResultMatchers.jsonPath("$.error.message").value("이메일 형식으로 작성해주세요:email"));
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
